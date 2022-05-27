@@ -1,7 +1,7 @@
 ﻿global using JSON = Newtonsoft.Json.JsonSerializer;
 using System.Diagnostics.CodeAnalysis;
 
-namespace BundleMaker;
+namespace BundleMaker.Core;
 [SuppressMessage("ReSharper", "NotNullMemberIsNotInitialized")]
 [SuppressMessage("ReSharper", "InconsistentNaming")]
 public static class CORE {

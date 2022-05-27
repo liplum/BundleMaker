@@ -2,12 +2,12 @@
 using BundleMaker.Core.Bundles;
 using BundleMaker.Core.Utils;
 
-namespace BundleMaker;
+namespace BundleMaker.Core;
 public class I18N {
     public ImmutableDictionary<string, string> Language2Name = new Dictionary<string, string> {
         { "en", "English" }
     }.ToImmutableDictionary();
-    private Bundle Bundle {
+    private Bundle? Bundle {
         get;
         set;
     }
@@ -33,8 +33,15 @@ public class I18N {
         Bundle = Bundle ??= new();
         Bundle.Pairs.AddAll(bundleContent);
     }
-    public string Get(string key) => Bundle.Get(key);
+    public string Get(string key) => Bundle!.Get(key);
     public string this[string key] {
-        get => Bundle[key];
+        get => Bundle![key];
     }
+    public bool Has(string key) => Bundle!.Has(key);
+    public string Format(string key, params object[] args) => Bundle!.Format(key, args);
+}
+
+public static class I18NHelper {
+    public static string Bundle(this string key) => CORE.I18N[key];
+    public static string Bundle(this string key, params object[] args) => CORE.I18N.Format(key, args);
 }

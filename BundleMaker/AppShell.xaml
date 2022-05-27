@@ -9,6 +9,17 @@
     Shell.FlyoutBehavior="Flyout">
     <FlyoutItem>
         <FlyoutItem.Title>
+            <bk:I18N Key="Shell.Project" />
+        </FlyoutItem.Title>
+        <ShellContent
+            ContentTemplate="{DataTemplate local:ProjectPage}">
+            <ShellContent.Title>
+                <bk:I18N Key="Shell.Main.Project" />
+            </ShellContent.Title>
+        </ShellContent>
+    </FlyoutItem>
+    <FlyoutItem>
+        <FlyoutItem.Title>
             <bk:I18N Key="Shell.Main" />
         </FlyoutItem.Title>
         <ShellContent

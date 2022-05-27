@@ -6,6 +6,9 @@ public class Bundle {
     } = new Dictionary<string, string>();
     public string Get(string key) =>
         Pairs.TryGetValue(key, out var value) ? value : $"???{key}???";
+    public string Format(string key, params object[] args) =>
+        Pairs.TryGetValue(key, out var value) ? string.Format(value, args) : $"???{key}???";
+    public bool Has(string key) => Pairs.ContainsKey(key);
     public string this[string key] {
         get => Get(key);
     }

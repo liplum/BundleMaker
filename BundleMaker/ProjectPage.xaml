@@ -2,12 +2,41 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BundleMaker"
+             xmlns:pro="clr-namespace:BundleMaker.Core.Project;assembly=BundleMaker.Core"
              x:Class="BundleMaker.ProjectPage">
     <Grid>
-        <ScrollView>
-            <FlexLayout x:Name="Body"
-                        Wrap="Wrap"
-                        JustifyContent="SpaceAround"/>
-        </ScrollView>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <CollectionView 
+            Grid.Row="0" ItemsSource="{Binding AllProjects}"
+            HorizontalOptions="Fill" VerticalOptions="Fill"
+            x:DataType="local:ProjectPage">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" HorizontalItemSpacing="15" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="pro:Project">
+                    <SwipeView HeightRequest="50">
+                        <SwipeView.LeftItems>
+                            <SwipeItems>
+                                <SwipeItem Text="{local:I18N Key=Project.Cell.Remove}" Invoked="RemoveCurrentProject" />
+                            </SwipeItems>
+                        </SwipeView.LeftItems>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" Text="{Binding Name}" />
+                            <Button Grid.Row="1" Text="Test button" />
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Grid.Row="0" x:Name="NewProjectButton" Text="{local:I18N Key=ProjectPage.NewProject}"
+                HorizontalOptions="End" VerticalOptions="End" WidthRequest="160" HeightRequest="70" Margin="0,0,20,22">
+        </Button>
     </Grid>
 </ContentPage>

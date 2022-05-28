@@ -1,4 +1,5 @@
-﻿using BundleMaker.Core.Utils;
+﻿using BundleMaker.Core;
+using BundleMaker.Core.Utils;
 using Newtonsoft.Json;
 
 namespace BundleMaker;

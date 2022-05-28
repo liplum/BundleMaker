@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BundleMaker.Test", "BundleM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BundleMaker.Core", "BundleMaker.Core\BundleMaker.Core.csproj", "{1B2FBCBF-A33D-4C05-99AE-A625D8944DD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BundleMaker.Console", "BundleMaker.Console\BundleMaker.Console.csproj", "{5C145801-E25C-46BA-BF12-342D3CAA8142}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,10 +29,6 @@ Global
 		{1B2FBCBF-A33D-4C05-99AE-A625D8944DD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B2FBCBF-A33D-4C05-99AE-A625D8944DD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B2FBCBF-A33D-4C05-99AE-A625D8944DD5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5C145801-E25C-46BA-BF12-342D3CAA8142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5C145801-E25C-46BA-BF12-342D3CAA8142}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5C145801-E25C-46BA-BF12-342D3CAA8142}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5C145801-E25C-46BA-BF12-342D3CAA8142}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

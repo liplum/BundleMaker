@@ -1,4 +1,4 @@
-﻿using BundleMaker.Core.Bundles;
+﻿using BundleMaker.Core;
 
 namespace BundleMaker;
 public class I18NExtension : IMarkupExtension<string> {

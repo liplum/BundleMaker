@@ -1,4 +1,6 @@
-﻿namespace BundleMaker;
+﻿using BundleMaker.Core;
+
+namespace BundleMaker;
 public class EditPage : ContentPage {
     public EditPage() {
         Content = new Button {

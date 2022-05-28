@@ -5,45 +5,23 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:BundleMaker"
-    xmlns:bk="clr-namespace:BundleMaker"
     Shell.FlyoutBehavior="Flyout">
-    <FlyoutItem>
-        <FlyoutItem.Title>
-            <bk:I18N Key="Shell.Project" />
-        </FlyoutItem.Title>
-        <ShellContent
+    <FlyoutItem Title="{local:I18N Key=Shell.Project}">
+        <ShellContent Title="{local:I18N Key=Shell.Project.Project}"
             ContentTemplate="{DataTemplate local:ProjectPage}">
-            <ShellContent.Title>
-                <bk:I18N Key="Shell.Main.Project" />
-            </ShellContent.Title>
         </ShellContent>
     </FlyoutItem>
-    <FlyoutItem>
-        <FlyoutItem.Title>
-            <bk:I18N Key="Shell.Main" />
-        </FlyoutItem.Title>
-        <ShellContent
+    <FlyoutItem Title="{local:I18N Key=Shell.Main}">
+        <ShellContent Title="{local:I18N Key=Shell.Main.Edit}"
             ContentTemplate="{DataTemplate local:EditPage}">
-            <ShellContent.Title>
-                <bk:I18N Key="Shell.Main.Edit" />
-            </ShellContent.Title>
         </ShellContent>
-        <ShellContent
+        <ShellContent Title="{local:I18N Key=Shell.Main.Translate}"
             ContentTemplate="{DataTemplate local:TranslatePage}">
-            <ShellContent.Title>
-                <bk:I18N Key="Shell.Main.Translate" />
-            </ShellContent.Title>
         </ShellContent>
     </FlyoutItem>
-    <FlyoutItem>
-        <FlyoutItem.Title>
-            <bk:I18N Key="Shell.More" />
-        </FlyoutItem.Title>
-        <ShellContent
+    <FlyoutItem Title="{local:I18N Key=Shell.More}">
+        <ShellContent Title="{local:I18N Key=Shell.More.Settings}"
             ContentTemplate="{DataTemplate local:SettingsPage}">
-            <ShellContent.Title>
-                <bk:I18N Key="Shell.More.Settings" />
-            </ShellContent.Title>
         </ShellContent>
     </FlyoutItem>
 </Shell>
